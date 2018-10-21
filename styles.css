@@ -238,7 +238,7 @@ Hero
     background: 
         linear-gradient(
         180deg, 
-        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0.3),
         rgba(0,0,0, 0) 50% ),
         url('img/simon-migaj-421505-unsplash.jpg');
     background-size: cover;
@@ -258,7 +258,7 @@ Hero
     background: 
         linear-gradient(
         180deg, 
-        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0.3),
         rgba(0,0,0, 0) 50% ),
         url('img/david-edelstein-668768-unsplash.jpg');
     background-size: cover;
@@ -269,7 +269,7 @@ Hero
     background: 
         linear-gradient(
         180deg, 
-        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0.3),
         rgba(0,0,0, 0) 50% ),
         url('img/ellyot-588064-unsplash.jpg');
     background-size: cover;
@@ -281,7 +281,7 @@ Hero
     background: 
         linear-gradient(
         180deg, 
-        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0.3),
         rgba(0,0,0, 0) 50% ),
         url('img/berkeley-communications-650145-unsplash.jpg');
     background-size: cover;
@@ -289,7 +289,7 @@ Hero
 }
 
 .hero-content {
-    width: 70%;
+    width: 600px;
     margin: 0 auto;
     margin-bottom: 150px;
     padding: 20px 20px 30px;
@@ -428,6 +428,12 @@ main .wrapper {
     #airplane {
         width: 160px;
         height: 120px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .hero-content {
+        width: 90%;
     }
 }
 
