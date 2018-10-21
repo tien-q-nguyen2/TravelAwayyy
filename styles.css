@@ -1,0 +1,579 @@
+/* Author: Tien Quang Nguyen
+Date: Oct 19, 2018
+Course: CPNT 262 - Web Client & Server Programming
+Assignment: Day 9 Workshop - Final Project */
+
+/* * * * * * * * * * * * * * * * * * * * *
+General
+* * * * * * * * * * * * * * * * * * * * */
+body {
+    margin: 0;
+    background: #ccc;
+    font-family: 'Niramit', sans-serif;
+}
+
+.wrapper {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+
+    font-family: 'Niramit', sans-serif;
+}
+
+img {
+    object-fit: cover;
+}
+
+a {
+    color: darkslategrey;
+}
+
+@media screen and (max-width: 610px) {
+    .wrapper {
+        padding: 40px 30px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .wrapper {
+        padding: 40px 25px;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+Header
+* * * * * * * * * * * * * * * * * * * * */
+header {
+    background: orange;
+    height: 100px;
+    font-family: 'Niramit', sans-serif;
+}
+
+.header-container {
+    display: flex;
+}
+
+.site-logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+    max-width: 280px;
+    min-width: 80px;
+    height: 100px;
+    background: slategrey;
+    margin-right: auto;
+    text-align: center;
+}
+
+.site-logo a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.site-logo a:hover {
+    background: white;
+}
+
+.site-logo h1 {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.8em;
+    color: orange;
+
+    margin: 0 20px;
+}
+
+.desktop-menu {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin: 0 20px;
+}
+
+.desktop-menu ul li {
+    height: 100px;
+    display: flex;
+}
+
+.desktop-menu ul li a {
+    padding: 0 30px;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    max-width: 160px;
+
+    transition-duration: 0.3s;
+}
+
+.desktop-menu ul li a:hover {
+    background: white;
+    color: rgb(255, 110, 0);
+}
+
+
+@media screen and (max-width: 700px) {
+    .desktop-menu ul {
+        margin: 0;
+    }
+    .desktop-menu ul li a {
+        padding: 0 25px;
+    }
+}
+
+.icon-container {
+    display: none;
+    width: 100%;
+}
+
+.icon-container button {
+    border: 0;
+    background: orange;
+    color: white;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.icon-container button:hover {
+    background: white;
+    color: orange;
+}
+
+@media screen and (max-width: 610px) {
+    .desktop-menu {
+        display: none;
+    }
+    .icon-container {
+        display: flex;
+    }
+    .search-icon {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 400px;
+    width: 200px;
+    background: lightslategrey;
+    transition: 0.3s;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu button {
+    margin-top: 10px;
+    font-size: 1.2em;
+    padding: 10px;
+    background: lightslategrey;
+
+    border: 2px orange solid;
+    color: orange;
+    text-decoration: none;
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.mobile-menu button:hover {
+    color: white;
+    text-decoration: none;
+    background: orange;
+    border: 2px white solid;
+}
+
+.mobile-menu a {
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+    background: orange;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.closed {
+    transform: translate(300px, 0);
+    position: fixed;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Hero
+* * * * * * * * * * * * * * * * * * * * */
+.hero {
+    background: 
+        linear-gradient(
+        180deg, 
+        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0) 50% ),
+        url('img/simon-migaj-421505-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.smaller-hero {
+    height: 400px;
+}
+
+.hero-packages {
+    background: 
+        linear-gradient(
+        180deg, 
+        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0) 50% ),
+        url('img/david-edelstein-668768-unsplash.jpg');
+    background-size: cover;
+    background-position: 75% 50%;
+}
+
+.hero-register {
+    background: 
+        linear-gradient(
+        180deg, 
+        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0) 50% ),
+        url('img/ellyot-588064-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Only on the home page: .hero-content */
+.hero-contact {
+    background: 
+        linear-gradient(
+        180deg, 
+        rgba(0,0,0, 0.5),
+        rgba(0,0,0, 0) 50% ),
+        url('img/berkeley-communications-650145-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    padding: 20px 20px 30px;
+    background: rgba(25, 25, 25, 0.5);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    color: darkorange;
+    font-size: 1.6em;
+    margin: 5px 0;
+}
+
+.hero-content p {
+    color: #ccc;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.hero-content a {
+    margin-top: 10px;
+    font-size: 1.2em;
+    padding: 5px 10px;
+
+    border: 2px orange solid;
+    color: orange;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.hero-content a:hover{
+    color: white;
+    text-decoration: none;
+    background: rgb(200, 100, 0, 0.5);
+    border: 2px white solid;
+    transition: 0.2s;
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+Main
+* * * * * * * * * * * * * * * * * * * * */
+main {
+    padding: 80px 0;
+    background: #eee;
+    color: #444;
+    font-family: 'Merriweather', serif;
+}
+
+main h2 {
+    font-size: 1.8em;
+    color: darkorange;
+    margin-bottom: 25px;
+    padding-left: 8px;
+    border-left: 8px solid;
+}
+
+main .wrapper {
+    max-width: 800px;
+}
+
+.main-container{
+    margin: 50px auto 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* For Packages page only */
+.package {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    border: 2px solid;
+    transition: 0.5s;
+    background: #ddd;
+    border-radius: 50px;
+}
+
+.package:hover {
+    transform: translate(0, -15px);
+    box-shadow: 5px 10px 2px 2px #888;
+
+    background:  rgba(255, 165, 0, 0.25);
+    border-color: darkorange;
+}
+
+.package:hover .package-title {
+    color: rgb(255, 110, 0);
+}
+
+.package:hover .package-desc {
+    color: black;
+}
+
+.package img {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.default-img {
+    transition: 0.5s;
+    position: absolute;
+}
+
+.package-info {
+    margin: 0 30px;
+}
+
+.package-title {
+    text-align: center;
+    transition: 0.5s;
+}
+
+#airplane {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+}
+
+@media screen and (max-width: 860px) {
+    .package {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #airplane {
+        width: 160px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #airplane {
+        width: 120px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .package img {
+        width: 240px;
+        height: 160px;
+    }
+    .default-img {
+        width: 240px;
+        height: 160px;
+    }
+    .package-info {
+        margin: 20px 10px;
+    }
+    .wrapper {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .package img {
+        width: 180px;
+        height: 120px;
+    }
+    .default-img {
+        width: 180px;
+        height: 120px;
+    }
+    .wrapper {
+        padding: 40px 15px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .package img {
+        width: 150px;
+        height: 100px;
+    }
+    .default-img {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+/* For Register Page only */
+input {
+    font-family: 'Niramit', sans-serif;
+    height: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align-last: justify;
+}
+
+form label {
+    margin: 10px 0;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+#submit {
+    height: 30px;
+    color: orange;
+    font-weight: bold;
+    border: 3px solid orange;
+    padding: 0 15px;
+    border-radius: 20px;
+    text-align-last: center;
+    margin-bottom: 40px;
+}
+
+#submit:hover {
+    border: 3px solid lightslategrey;
+    background: orange;
+    color: lightslategrey;
+}
+
+#error-display {
+    margin-top: 40px;
+    color: red;
+}
+
+/* For Contact page only */
+#agent-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.agent {
+    min-width: 200px;
+    padding: 20px;
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agent-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agent-info h3 {
+    margin: 10px 0;
+}
+
+.agent-info h4 {
+    margin: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+Footer
+* * * * * * * * * * * * * * * * * * * * */
+footer {
+    margin-top: -30px;
+    min-height: 100px;
+    max-height: 150px;
+    background: orange;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #555;
+    padding: 5px;
+    text-align: center;
+}

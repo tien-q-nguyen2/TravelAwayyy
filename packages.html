@@ -1,0 +1,116 @@
+<!-- Author: Tien Quang Nguyen
+Date: Oct 19, 2018
+Course: CPNT 262 - Web Client & Server Programming
+Assignment: Day 9 Workshop - Final Project -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Awayyy Travel Packages Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Mobile Menu (hidden on bigger screens) -->
+    <div class='mobile-menu closed' id='mobile-menu'>
+        <button id='close-button'>Close</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class = 'header-container'>
+                <div class = 'site-logo'>
+                    <a href = "index.html">
+                        <div>
+                            <h1>Travel Awayyy</h1>
+                        </div>
+                    </a>
+                </div>
+            </a>
+
+            <div class = 'desktop-menu'>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="packages.html">Vacation Packages</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class = "icon-container">
+                <button id='open-button'>
+                    <i class="fas fa-bars fa-2x" ></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class='hero hero-packages smaller-hero'></div>
+
+    <!-- Content Section -->
+    <main class='wrapper'>
+        <div class='wrapper'>
+            <h2>Featuring our hand-picked packages</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia explicabo unde aut corporis. Architecto unde laboriosam perspiciatis. Voluptatem placeat fugiat beatae voluptas magnam qui, eaque error maxime facere, ipsum labore!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cumque ipsam! Reprehenderit in non iusto ducimus tempore! Exercitationem quae dolorum enim fugiat eos accusamus, sint amet tenetur eligendi inventore repellendus.</p>
+
+            <div class='package'>
+                <img class='default-img' src="img/deskglobe.jpg" alt="desk globe on table">
+                <img class='package-img' src="img/snowyplace.jpg" alt="A cabin in a middle of lots of snow">
+                <div class='package-info'>
+                    <h1 class='package-title'>A Snowy Package</h1>
+                    <p class='package-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nostrum asperiores doloremque tenetur repellendus corrupti ipsa facere error necessitatibus iste incidunt non omnis animi nisi soluta voluptate, exercitationem pariatur ullam.</p>
+                </div>
+            </div>
+
+            <div class='package'>
+                <img class='default-img' src="img/deskglobe.jpg" alt="desk globe on table">
+                <img class='package-img' src="img/japaneseplace.jpg" alt="Japanese high-rise building in front of trees">
+                <div class='package-info'>
+                    <h1 class='package-title'>A Japanese Package</h1>
+                    <p class='package-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nostrum asperiores doloremque tenetur repellendus corrupti ipsa facere error necessitatibus iste incidunt non omnis animi nisi soluta voluptate, exercitationem pariatur ullam.</p>
+                </div>
+            </div>
+
+            <div class='package'>
+                <img class='default-img' src="img/deskglobe.jpg" alt="desk globe on table">
+                <img class='package-img' src="img/europeanplace.jpg" alt="beige buildings near large body of water">
+                <div class='package-info'>
+                    <h1 class='package-title'>An European Package</h1>
+                    <p class='package-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nostrum asperiores doloremque tenetur repellendus corrupti ipsa facere error necessitatibus iste incidunt non omnis animi nisi soluta voluptate, exercitationem pariatur ullam.</p>
+                </div>
+            </div>
+        
+            <img id='airplane' src="img/airplane.jpg" alt="low angle photography of airplane on the sky">
+        </div>
+    </main>
+    <br/>
+
+    <!-- Footer Section -->
+    <footer>
+        <p id='footer-info'></p>
+        <p>Copyright <span id='copyright-year'></span>. Travel Awayyy. 
+            All rights reserved.</p>
+    </footer>
+
+    <script src='script/script-mobile.js'></script>
+    <script src='script/script-packages.js'></script>
+    <script src='script/script-footer.js'></script>
+</body>
+</html>
