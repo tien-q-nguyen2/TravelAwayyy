@@ -269,7 +269,7 @@ Hero
     background: 
         linear-gradient(
         180deg, 
-        rgba(0,0,0, 0.3),
+        rgba(0,0,0, 0.5),
         rgba(0,0,0, 0) 50% ),
         url('img/ellyot-588064-unsplash.jpg');
     background-size: cover;
@@ -281,7 +281,7 @@ Hero
     background: 
         linear-gradient(
         180deg, 
-        rgba(0,0,0, 0.3),
+        rgba(0,0,0, 0.5),
         rgba(0,0,0, 0) 50% ),
         url('img/berkeley-communications-650145-unsplash.jpg');
     background-size: cover;
