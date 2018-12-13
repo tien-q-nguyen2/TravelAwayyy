@@ -302,6 +302,13 @@ Hero
     align-items: center;
 }
 
+@media screen and (max-width: 415px) {
+	.hero-content {
+		max-width: 100%;
+		padding: 20px 10px 30px;
+	}
+}
+
 .hero-content h1 {
     color: darkorange;
     font-size: 1.6em;
